@@ -1,0 +1,6 @@
+<app-preview srcUrl="{{ pictures[currentPicture] }}"></app-preview>
+
+<ul>
+  <!-- <li><app-thumb (click)="select(0)" srcUrl="{{ pictures[0] }}"></app-thumb></li> -->
+ <li><app-thumb *ngFor="let el of pictures; let i = index" (click)="select(i)" srcUrl="{{ el }}"></app-thumb></li>
+</ul>
